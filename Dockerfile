@@ -43,7 +43,7 @@ RUN set -x \
     && rm -rf $SONARQUBE_HOME/bin/*
 
 # Install SonarTS plugin
-RUN curl -o $SONARQUBE_HOME/extensions/plugins/sonar-typescript-plugin-1.6.0.2388.jar https://sonarsource.bintray.com/Distribution/sonar-typescript-plugin/sonar-typescript-plugin-1.6.0.2388.jar
+RUN curl -oL $SONARQUBE_HOME/extensions/plugins/sonar-typescript-plugin-1.6.0.2388.jar https://sonarsource.bintray.com/Distribution/sonar-typescript-plugin/sonar-typescript-plugin-1.6.0.2388.jar
 
 # Install nodeJS
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
